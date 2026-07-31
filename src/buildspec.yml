@@ -1,17 +1,17 @@
 verison: 0.2
 phases: 
-    install:
-        runtime-versions: 
-            nodejs: latest
-        commands:
-            - npm install -g @angular/cli@latest
+  install:
+    runtime-versions: 
+      nodejs: latest
+    commands:
+      - npm install -g @angular/cli@latest
     pre_build:
-        commands:
-            - npm install
+      commands:
+        - npm install
     build:
-        commands:
-            - ng build -c production
+      commands:
+        - ng build -c production
 artifacts:
-    base-directory: dist/my-angular-project
-    files:
-        - '**/*'
+  base-directory: dist/my-angular-project
+  files:
+    - '**/*'
