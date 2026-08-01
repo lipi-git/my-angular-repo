@@ -1,16 +1,19 @@
 version: 0.2
-phases: 
+
+phases:
   install:
-    runtime-versions: 
+    runtime-versions:
       nodejs: 22
+
+  pre_build:
     commands:
       - npm install
-    commands:
-      - npm install
+
   build:
     commands:
-      - ng build -c production
+      - npx ng build --configuration production
+      - ls -R dist
+
 artifacts:
-  base-directory: dist/my-angular-project
   files:
-    - '**/*'
+    - 'dist/**/*'
