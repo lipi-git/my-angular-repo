@@ -15,5 +15,6 @@ phases:
       - ls -R dist
 
 artifacts:
+  base-directory: dist/my-angular-project
   files:
     - '**/*'
